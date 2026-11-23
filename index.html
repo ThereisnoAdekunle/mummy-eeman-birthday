@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#170d13" />
+  <meta name="description" content="A little celebration made with love for Mummy Eeman." />
+  <meta property="og:title" content="Happy Birthday, Mummy Eeman" />
+  <meta property="og:description" content="A little celebration made with love." />
+  <title>Happy Birthday, Mummy Eeman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">
+    <span class="sound-icon">♫</span><span id="soundText">sound off</span>
+  </button>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="top-ornament reveal"><span></span><i>✦</i><span></span></div>
+      <p class="eyebrow reveal">A celebration of a beautiful soul</p>
+      <h1 class="hero-title reveal">
+        <span>Happy Birthday</span>
+        <em>Mummy Eeman</em>
+      </h1>
+      <p class="hero-copy reveal">Today is all about celebrating you — your warmth, your kindness, and the beautiful light you bring into the lives around you.</p>
+      <a class="scroll-cue reveal" href="#wishes"><span class="scroll-line"></span><span>there's a little magic below</span><span class="scroll-arrow">↓</span></a>
+      <div class="hero-sparkle sparkle-a">✧</div><div class="hero-sparkle sparkle-b">✦</div><div class="hero-sparkle sparkle-c">✧</div>
+    </section>
+
+    <section class="wishes section-shell" id="wishes">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A few things I wish for you</p>
+        <h2>Three wishes, <em>from the heart.</em></h2>
+        <p class="section-note">Take your time. Each little card holds a wish just for you.</p>
+      </div>
+      <div class="wish-grid">
+        <button class="wish-card reveal" type="button" aria-expanded="false">
+          <span class="card-number">01 / JOY</span><span class="card-flower">✿</span>
+          <span class="card-prompt">A year full of joy</span><span class="card-hint">tap to reveal ✦</span>
+          <span class="card-message">May every day bring you a reason to smile, a moment to be grateful for, and a little more happiness than the day before.</span>
+        </button>
+        <button class="wish-card reveal" type="button" aria-expanded="false">
+          <span class="card-number">02 / PEACE</span><span class="card-flower">❀</span>
+          <span class="card-prompt">A heart at peace</span><span class="card-hint">tap to reveal ✦</span>
+          <span class="card-message">May your days be gentle, your home be filled with laughter, your plants bloom beautifully, and only good news find its way to your door.</span>
+        </button>
+        <button class="wish-card reveal" type="button" aria-expanded="false">
+          <span class="card-number">03 / LOVE</span><span class="card-flower">✾</span>
+          <span class="card-prompt">Love all around you</span><span class="card-hint">tap to reveal ✦</span>
+          <span class="card-message">May you always feel deeply loved and appreciated. Thank you for all the little and big ways you make life feel warmer.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="cake-section section-shell" id="cake-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A birthday tradition</p>
+        <h2>Make a wish, <em>Mummy Eeman.</em></h2>
+        <p class="section-note">Tap each candle gently to blow it out. Make your biggest wish.</p>
+      </div>
+      <div class="cake-scene reveal">
+        <div class="cake-glow"></div>
+        <div class="cake">
+          <div class="candles">
+            <button class="candle" aria-label="Blow out candle one"><span class="flame"></span><span class="wick"></span><span class="smoke"></span></button>
+            <button class="candle" aria-label="Blow out candle two"><span class="flame"></span><span class="wick"></span><span class="smoke"></span></button>
+            <button class="candle" aria-label="Blow out candle three"><span class="flame"></span><span class="wick"></span><span class="smoke"></span></button>
+          </div>
+          <div class="cake-top"><span class="icing-drip"></span><span class="cake-berry berry-one">✦</span><span class="cake-berry berry-two">✦</span></div>
+          <div class="cake-middle"><span class="cake-decoration">✧ &nbsp; ✧ &nbsp; ✧</span></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="cake-status" id="cakeStatus" aria-live="polite">three little flames, one big wish</p>
+        <button class="relight" id="relight" type="button">light the candles again ↗</button>
+      </div>
+    </section>
+
+    <section class="memory-section" id="memories">
+      <div class="memory-backdrop"></div>
+      <div class="section-shell memory-content">
+        <div class="section-heading reveal">
+          <p class="eyebrow">A moment worth keeping</p>
+          <h2>The gift of <em>your smile.</em></h2>
+          <p class="section-note">Some people make ordinary moments feel special. You are one of them.</p>
+        </div>
+        <p class="photo-hint" id="photoHint">blow out the candles above to reveal your memories ✦</p>
+        <div class="photo-gallery">
+          <figure class="photo-frame"><div class="photo-inner"><img src="photo-1.jpeg" alt="A lovely memory of Mummy Eeman" /><span class="photo-placeholder">add photo-1.jpeg</span></div><figcaption>A beautiful soul, effortlessly.</figcaption></figure>
+          <figure class="photo-frame"><div class="photo-inner"><img src="photo-2.jpeg" alt="A happy memory of Mummy Eeman" /><span class="photo-placeholder">add photo-2.jpeg</span></div><figcaption>Moments that deserve to last.</figcaption></figure>
+          <figure class="photo-frame"><div class="photo-inner"><img src="photo-3.jpeg" alt="A treasured memory of Mummy Eeman" /><span class="photo-placeholder">add photo-3.jpeg</span></div><figcaption>And many more beautiful years.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-note section-shell">
+      <div class="final-ornament reveal">✦</div>
+      <p class="eyebrow reveal">With all our love</p>
+      <h2 class="final-title reveal">May this new chapter<br><em>be your most beautiful yet.</em></h2>
+      <p class="signature reveal">With warm wishes,</p>
+      <p class="signature-names reveal">Mummy Imraan &amp; Daddy Imraan</p>
+      <div class="bottom-stars reveal">✧ &nbsp; ✦ &nbsp; ✧</div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
